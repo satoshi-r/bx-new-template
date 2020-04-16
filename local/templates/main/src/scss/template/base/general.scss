@@ -1,6 +1,3 @@
-$accent: orange;
-$text: #333;
-
 ::placeholder {
     color: #666;
 }
@@ -12,6 +9,7 @@ $text: #333;
 
 * {
     -webkit-font-smoothing: antialiased; // сглаживание шрифтов
+    transition: $transition;
 }
 
 input,
@@ -28,17 +26,14 @@ textarea {
     }
 }
 
-
 a,
 label {
     -webkit-tap-highlight-color: transparent;
 }
 
-
 a {
     color: $text;
     cursor: pointer;
-    transition: .1s;
 
     &:hover,
     &:active {
@@ -48,22 +43,62 @@ a {
 
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
 button {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+        color: $accent;
+    }
 
     &:active,
     &:focus {
-        padding: 0;
         outline: 0;
     }
 }
 
+.btn {
+    color: #fff;
+    background-color: $accent;
+    border: 2px solid $accent;
+    height: 44px;
+    padding: 0px 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
+    &:hover {
+        background-color: $text;
+        border-color: $text;
+        color: #fff;
+    }
+}
+
+.show {
+    display: block;
+}
+    
+.hide {
+    display: none;
+}
 
 body {
-    font-size: 18px;
+    font-size: 16px;
     min-width: 320px;
     position: relative;
-    line-height: 1.65;
+    line-height: 1.38;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
     color: $text;
@@ -76,47 +111,3 @@ picture {
     margin: 0px auto;
 }
 
-
-.resize-animation-stopper * {
-    animation: none !important;
-    transition: none !important;
-}
-
-
-.container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.img-responsive {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-}
-
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1170px;
-    }
-}

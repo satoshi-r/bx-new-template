@@ -57,7 +57,7 @@ gulp.task('browser-sync', () => {
 // Styles
 gulp.task('styles:page', () => {
 	return gulp.src([
-		src + 'scss/page/base/**/*.scss',
+		src + 'scss/vars.scss',
 		src + 'scss/page/**/*.scss'
 	])
 		.pipe(sourcemaps.init())
@@ -91,7 +91,8 @@ gulp.task('styles:page', () => {
 
 gulp.task('styles:template', () => {
 	return gulp.src([
-		src + 'scss/template/vendors/**/*.scss',
+		src + 'scss/vars.scss',
+		src + 'scss/template/vendors/**/*.{scss,css,sass}',
 		src + 'scss/template/base/**/*.scss',
 		src + 'scss/template/**/*.scss'
 	])
