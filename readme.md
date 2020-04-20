@@ -4,6 +4,7 @@ local > template > main > src <code>npm i</code>
 
 <code>npm run dev</code>: run default gulp tasks ('img', 'styles', 'scripts', 'browser-sync', 'watch') and  development mode <br>
 <code>npm run build</code>: run build tasks and production mode <br>
+<code>npm run clean</code>: run clean images task <br>
 
 
 
