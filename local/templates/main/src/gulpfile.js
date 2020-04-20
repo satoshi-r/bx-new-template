@@ -30,7 +30,7 @@ const webpackConfig = {
 			}]
 	},
 	mode: isDev ? 'development' : 'production',
-	devtool: isDev ? 'source-map' : 'none',
+	devtool: isDev ? 'cheap-module-eval-source-map' : 'none',
 	optimization: {
 		minimize: true
 	},
